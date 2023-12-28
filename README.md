@@ -37,8 +37,8 @@ Ref https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sspr
 # KQL 
 
 AuditLogs
-| where OperationName == "Change password (self-service)"
-| where ResultDescription == "PasswordDoesnotComplyFuzzyPolicy"
-| extend User = tostring(parse_json(tostring(InitiatedBy.user)).userPrincipalName)
-| summarize count() by User
-| where count_ > 1
+| where OperationName == "Change password (self-service)"  
+| where ResultDescription == "PasswordDoesnotComplyFuzzyPolicy"  
+| extend User = tostring(parse_json(tostring(InitiatedBy.user)).userPrincipalName)  
+| summarize count() by User  
+| where count_ > 1  

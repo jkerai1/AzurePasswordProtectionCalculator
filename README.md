@@ -29,3 +29,8 @@ Ref https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sspr
 
 # Example  
 ![image](https://github.com/jkerai1/AzurePasswordProtectionCalculator/assets/55988027/5ec1f424-97dd-462f-af9c-042d441844c3)
+
+# Audit  
+
+![image](https://github.com/jkerai1/AzurePasswordProtectionCalculator/assets/55988027/c6ead3ad-06b3-4fa5-9ea4-6abc0cc73854)
+

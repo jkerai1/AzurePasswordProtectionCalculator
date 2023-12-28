@@ -34,3 +34,11 @@ Ref https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sspr
 
 ![image](https://github.com/jkerai1/AzurePasswordProtectionCalculator/assets/55988027/c6ead3ad-06b3-4fa5-9ea4-6abc0cc73854)
 
+# KQL 
+
+AuditLogs
+| where OperationName == "Change password (self-service)"
+| where ResultDescription == "PasswordDoesnotComplyFuzzyPolicy"
+| extend User = tostring(parse_json(tostring(InitiatedBy.user)).userPrincipalName)
+| summarize count() by User
+| where count_ > 1

@@ -26,3 +26,6 @@ There are notably a few issues:
 
 ![image](https://github.com/jkerai1/AzurePasswordProtectionCalculator/assets/55988027/45086509-de88-4c91-87da-dffdc369dc99)
 Ref https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sspr-policy#microsoft-entra-password-policies
+
+# Example  
+![image](https://github.com/jkerai1/AzurePasswordProtectionCalculator/assets/55988027/5ec1f424-97dd-462f-af9c-042d441844c3)

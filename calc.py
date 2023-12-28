@@ -84,7 +84,8 @@ while True:
                         #print("Temp: " + temp)
                         print("password directly contains banned phrase: " + word)
                     
-                    #temp = temp.replace("0", "o").replace("1","l").replace("$","s").replace("@","a").replace("5", "s")
+                    #Apply Normalisation to Temp
+                    temp = temp.replace("0", "o").replace("1","l").replace("$","s").replace("@","a").replace("5", "s").lower()
                     
                     for i in SetToCheck:
                         if i in temp:

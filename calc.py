@@ -6,7 +6,6 @@ AllowedNumbers = "0123456789"
 AllowedChars = AllowedLowerCase + AllowedUpperCase + AllowedSymbols + AllowedNumbers 
 #https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sspr-policy#microsoft-entra-password-policies
 
-score = 0
 
 def generate_edit_distance_one(s): # I could also use regex here
     splits = [(s[:i], s[i:]) for i in range(len(s) + 1)]
@@ -72,6 +71,7 @@ while True:
             #Fuzzy Match: edit distance of 1 comparison. We can do this is use Levenshtein Distance or create a fuzz set
             
             temp = inp
+            score = 0
             
             for word in BannedPasswords:
                 if len(word) >4: 

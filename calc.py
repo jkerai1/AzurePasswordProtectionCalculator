@@ -8,7 +8,7 @@ AllowedChars = AllowedLowerCase + AllowedUpperCase + AllowedSymbols + AllowedNum
 
 score = 0
 
-def generate_edit_distance_one(s):
+def generate_edit_distance_one(s): # I could also use regex here
     splits = [(s[:i], s[i:]) for i in range(len(s) + 1)]
     deletes = [L + R[1:] for L, R in splits if R]
     substitutes = [L + c + R[1:] for L, R in splits if R for c in (AllowedLowerCase + AllowedSymbols + AllowedNumbers)]
@@ -43,7 +43,7 @@ while True:
         if (ContainsNumber + ContainsLowerCase + ContainsUpperCase +ContainsSymbol) < 3 or invalidflag ==1:
                 print("invalid Password. Does not meet requirements.")
                 print("Contains Number: " + str(ContainsNumber))
-                print("Contains LowerCase: " + str(ContainsLowerCase))
+                print("Contains LowerCase: " + str(ContainsLowerCase)) #need to replace with fstring
                 print("Contains UpperCase: " + str(ContainsUpperCase))
                 print("Contains Symbol: " + str(ContainsSymbol))
                 print("invalid character: " + str(invalidflag))

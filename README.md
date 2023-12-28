@@ -8,6 +8,7 @@ There are notably a few issues:
 - not all string substitions are given on the documentation
 - SSPR can bypass reuse of old password, something I cannot account for
 - License Requirement of P1 / P2
+- Tenant name matching isn't done when validating passwords on an AD DS domain 
 
 # Score Calculation  
 ![image](https://github.com/jkerai1/AzurePasswordProtectionCalculator/assets/55988027/dc5a2f22-2fcf-4fee-9de1-8977b6f621fe)

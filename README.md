@@ -1,10 +1,13 @@
 # AzurePasswordProtectionCalculator
-Calculator for Azure Password Protection. The calculation for what passes as a valid password is difficult to comprehend so I attempted to make a calculator.
+Calculator for Azure Password Protection. The calculation for what passes as a valid password is difficult to comprehend so I attempted to make a calculator. 
+
+https://learn.microsoft.com/en-us/entra/identity/authentication/concept-password-ban-bad
 
 There are notably a few issues:
 - the azure in-built password list is hidden
 - not all string substitions are given on the documentation
 - SSPR can bypass reuse of old password, something I cannot account for
+- License Requirement of P1 / P2
 
 # Score Calculation  
 ![image](https://github.com/jkerai1/AzurePasswordProtectionCalculator/assets/55988027/dc5a2f22-2fcf-4fee-9de1-8977b6f621fe)

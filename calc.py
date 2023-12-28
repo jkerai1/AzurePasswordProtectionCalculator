@@ -101,7 +101,7 @@ while True:
         
         #TenantName/userName. The documentation/testing seems to suggest that distance is not affected here.
         #This Check is applied AFTER Normalisation
-            if (FirstName in inp and len(FirstName)>=4) or (LastName in inp and len(LastName)>=4) or (TenantName in inp and len(TenantName)>=4):
+            if (FirstName in normalized_inp and len(FirstName)>=4) or (LastName in normalized_inp and len(LastName)>=4) or (TenantName in normalized_inp and len(TenantName)>=4):
                 #print(inp)
                 print("invalid Password, contains first/last/tenantName")
                 break; #Documentation Example suggests its rejected regardless of the score

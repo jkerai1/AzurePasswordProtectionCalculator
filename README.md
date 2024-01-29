@@ -42,3 +42,6 @@ AuditLogs
 | extend User = tostring(parse_json(tostring(InitiatedBy.user)).userPrincipalName)  
 | summarize count() by User  
 | where count_ > 1  
+
+
+Featured on Entra News Issue 26 https://entra.news/p/entranews-26-your-weekly-dose-of

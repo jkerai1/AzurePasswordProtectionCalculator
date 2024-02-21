@@ -1,3 +1,8 @@
+[![GitHub stars](https://img.shields.io/github/stars/jkerai1/AzurePasswordProtectionCalculator?style=flat-square)](https://github.com/jkerai1/AzurePasswordProtectionCalculator/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/jkerai1/AzurePasswordProtectionCalculator?style=flat-square)](https://github.com/jkerai1/AzurePasswordProtectionCalculator/network)
+[![GitHub issues](https://img.shields.io/github/issues/jkerai1/AzurePasswordProtectionCalculator?style=flat-square)](https://github.com/jkerai1/AzurePasswordProtectionCalculator/issues)
+[![GitHub pulls](https://img.shields.io/github/issues-pr/jkerai1/AzurePasswordProtectionCalculator?style=flat-square)](https://github.com/jkerai1/AzurePasswordProtectionCalculator/pulls)
+
 # AzurePasswordProtectionCalculator
 Calculator for Azure Password Protection. The calculation for what passes as a valid password is difficult to comprehend so I attempted to make a calculator. 
 

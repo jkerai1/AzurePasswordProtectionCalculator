@@ -62,10 +62,15 @@ while True:
             normalized_inp = normalized_inp.replace("1","l")
             normalized_inp = normalized_inp.replace("$","s")
             normalized_inp = normalized_inp.replace("@","a")
-        
-        #Guess Work Leet Speak from valid chars. Ref: https://www.gamehouse.com/blog/leet-speak-cheat-sheet/
+
+            #Provided by synacktiv.com https://www.synacktiv.com/publications/entra-id-banned-password-lists-password-spraying-optimizations-and-defenses
             normalized_inp = normalized_inp.replace("5", "s")
-        
+            normalized_inp = normalized_inp.replace("|","l")
+            normalized_inp = normalized_inp.replace("i","l")
+            normalized_inp = normalized_inp.replace("2","z")
+            normalized_inp = normalized_inp.replace("3","e")
+            normalized_inp = normalized_inp.replace("!","l")
+            
            #Step 2: Check if password is considered Banned (min length of 4)
             
             #Fuzzy Match: edit distance of 1 comparison. We can do this is use Levenshtein Distance or create a fuzz set

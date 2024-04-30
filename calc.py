@@ -1,10 +1,20 @@
-BannedPasswords = ['password','summer2016'] #Azures password list is hidden
+BannedPasswords = ['TEST PASSWORD HERE'] #Azures password list is hidden but was dumped by Synacktiv
+with open("eipp-global-bpl.txt") as file:
+    for line in file: 
+        line = line.strip() #or some other preprocessing
+        BannedPasswords.append(line) #storing everything in memory!
+with open("CustomList.txt") as file: # option to add a custom List here also
+    for line in file:
+        line = line.strip()
+        BannedPasswords.append(line) #storing everything in memory!
 AllowedLowerCase = "abcdefghijklmnopqrstuvwxyz"
 AllowedUpperCase = "ABCDEFGHIJKLMNOPQRSTUVXYWZ"
 AllowedSymbols = " @#$%^&*-_!+=[]{}|\:',.?/`~();<>\""
 AllowedNumbers = "0123456789"
 AllowedChars = AllowedLowerCase + AllowedUpperCase + AllowedSymbols + AllowedNumbers 
 #https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sspr-policy#microsoft-entra-password-policies
+
+
 
 
 def generate_edit_distance_one(s): # I could also use regex here
@@ -15,13 +25,22 @@ def generate_edit_distance_one(s): # I could also use regex here
     return set(deletes + substitutes + inserts)
 
 
+
+
 print("Substring matching is used on the normalized password to check for the user's first and last name as well as the tenant name. Tenant name matching isn't done when validating passwords on an AD DS domain controller for on-premises hybrid scenarios.")
 FirstName = input("First Name?: ")
 LastName = input("Last Name?: ")
 TenantName = input("Tenant name? (Note: Other Domains associated to the tenant are allowed just not the one used for UPN): ")
     
-    
+#Error Handle
+ContainsLowerCase = 0
+ContainsUpperCase = 0
+ContainsSymbol = 0
+invalidflag = 0    
+
+
 while True: 
+
 
     inp = input("password to test: ")
     
@@ -30,16 +49,16 @@ while True:
     if len(inp) <= 256 and len(inp) >= 8:
         for i in inp:
             if i in AllowedLowerCase:
-                ContainsLowerCase = 1
+                ContainsLowerCase = 1 
             if i in AllowedUpperCase:
-                ContainsUpperCase = 1
+                ContainsUpperCase = 1 
             if i in AllowedNumbers:
                 ContainsNumber = 1
             if i in AllowedSymbols:
                 ContainsSymbol = 1
             if i not in AllowedChars: #filter out if invalid characters AFTER length check
-                invalidflag = 1
-        if (ContainsNumber + ContainsLowerCase + ContainsUpperCase +ContainsSymbol) < 3 or invalidflag ==1:
+                invalidflag = 1  
+        if (ContainsNumber + ContainsLowerCase + ContainsUpperCase + ContainsSymbol) < 3 or invalidflag ==1:
                 print("invalid Password. Does not meet requirements.")
                 print("Contains Number: " + str(ContainsNumber))
                 print("Contains LowerCase: " + str(ContainsLowerCase)) #need to replace with fstring
@@ -62,6 +81,7 @@ while True:
             normalized_inp = normalized_inp.replace("1","l")
             normalized_inp = normalized_inp.replace("$","s")
             normalized_inp = normalized_inp.replace("@","a")
+
 
             #Provided by synacktiv.com https://www.synacktiv.com/publications/entra-id-banned-password-lists-password-spraying-optimizations-and-defenses
             normalized_inp = normalized_inp.replace("5", "s")

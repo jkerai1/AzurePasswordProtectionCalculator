@@ -9,7 +9,7 @@ Calculator for Azure Password Protection. The calculation for what passes as a v
 https://learn.microsoft.com/en-us/entra/identity/authentication/concept-password-ban-bad
 
 There are notably a few issues:
-- the azure in-built password list is hidden
+- the azure in-built password list is hidden. UPDATE: List was dumped and now been included in the tool!
 - not all string substitions are given on the documentation
 - SSPR can bypass reuse of old password, something I cannot account for
 - License Requirement of P1 / P2
